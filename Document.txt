@@ -18,3 +18,10 @@ Pods:
 #kubectl rollout history deployment <deployment-name>
 #kubectl rollout undo deployment <deployment-name>
 #kubectl describe deployment <deployment-name>
+
+#kubectl taint nodes node-name key=value:taint-effect
+**taint-effect
+     NoSchedule
+     PreferNoSchedule
+     NoExecute
+#kubectl taint nodes node-name key:taint-effect-

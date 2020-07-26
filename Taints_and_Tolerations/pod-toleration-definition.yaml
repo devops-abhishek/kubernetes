@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: myapp
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:alpine
+  tolerations:
+    - key:  kubernetes.io/hostname
+      operator: Equal
+      value: docker1
+      effect: NoSchedule
