@@ -1,0 +1,20 @@
+Pods:
+#kubectl run nginx --image=nginx
+#kubectl create -f <yaml file name>
+#kubectl delete -f <yaml file name>
+#kubectl get pods
+#kubectl delete pod <name of pod>
+#kubectl get pods -o wide --show-labels
+#kubectl run --generator=run-pod/v1 nginx --image=nginx
+#kubectl run --generator=run-pod/v1 nginx --image=nginx --dry-run -o yaml
+#kubectl create deployment --image=nginx nginx
+#kubectl create deployment --image=nginx nginx --dry-run -o yaml
+#kubectl get deployment
+#kubectl get rs
+#kubectl get rc
+#kubectl rollout status deployment <deployment-name>
+#kubectl rollout pause deployment <deployment-name>
+#kubectl rollout resume deployment <deployment-name>
+#kubectl rollout history deployment <deployment-name>
+#kubectl rollout undo deployment <deployment-name>
+#kubectl describe deployment <deployment-name>
