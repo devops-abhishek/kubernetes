@@ -27,3 +27,9 @@ Pods:
 #kubectl taint nodes node-name key:taint-effect-
 
 #kubectl label nodes <node-name> <key>=<value>
+
+
+NodeAffinity:
+  requiredDuringSchedulingIgnoredDuringExecution
+  preferredDuringSchedulingIgnoredDuringExecution
+  requiredDuringSchedulingRequiredDuringExecution
