@@ -25,3 +25,5 @@ Pods:
      PreferNoSchedule
      NoExecute
 #kubectl taint nodes node-name key:taint-effect-
+
+#kubectl label nodes <node-name> <key>=<value>
