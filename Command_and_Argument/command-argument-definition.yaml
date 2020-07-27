@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: command-argument-pod
+  labels:
+    app: myapp
+spec:
+  containers:
+    - name: command-argument-container
+      image: busybox
+      command: ["sleep"]
+      args: ["50"]
