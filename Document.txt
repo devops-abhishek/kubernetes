@@ -19,6 +19,12 @@ Pods:
 #kubectl rollout undo deployment <deployment-name>
 #kubectl describe deployment <deployment-name>
 
+Deployment Strategy:
+  RollingUpdate : It is default deployment Strategy
+  Recreate : Application Down
+
+
+
 #kubectl taint nodes node-name key=value:taint-effect
 **taint-effect
      NoSchedule
@@ -33,3 +39,29 @@ NodeAffinity:
   requiredDuringSchedulingIgnoredDuringExecution
   preferredDuringSchedulingIgnoredDuringExecution
   requiredDuringSchedulingRequiredDuringExecution
+
+StaticPods:
+  pod-manifests-path= /etc/kubernetes/manifests
+
+Monitoring :
+  Number of Worker nodes
+  How many Worker nodes are healthy
+  Resource(CPU, Memory, Disk) Utilization of each Worker Nodes
+  Pod level Performance metrices.
+
+CAdvisior is running with kubelet at worker node and giving monitoring metrices to API Server.
+
+-> Metrics Server : In memory Monitoring System
+-> Prometheus
+-> Elastic Stack
+-> Datadog
+-> Dynatrace
+
+Minikube:
+#minikube addons enable metrics-server
+
+Kubernetes Cluster :
+#kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.7/components.yaml
+
+kubectl top nodes
+kubectl top pods
